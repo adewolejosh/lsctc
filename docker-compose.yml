@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+
+  db:
+    image: postgres
+
+  lsctc-py-server:
+    build: ./lsctc-py-server/
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./lsctc-py-server:/lsctc-py-server
+    depends_on:
+      - db
+    command: python3 manage.py runserver 0.0.0.0:8000
+
+  lsctc-js-server:
+    build: ./lsctc-js-server/
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./lsctc-js-server:/lsctc-js-server
+    command: npm start
+    environment:
+      - NODE_ENV=development

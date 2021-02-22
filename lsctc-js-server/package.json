@@ -1,0 +1,14 @@
+{
+  "name": "lsctc-js-server",
+  "version": "1.0.0",
+  "description": "***Originally, a model for a Lagos State Central Transportation System server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joshua Adewole",
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^8.5.1"
+  }
+}

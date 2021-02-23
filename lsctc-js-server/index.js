@@ -3,7 +3,7 @@ const {Pool} = require('pg')
 const db_config = require('./db/config.js')
 
 const app = express()
-const port = 3000
+const port = process.env.PORT
 
 const client = new Pool(db_config)
 client.connect(function(){

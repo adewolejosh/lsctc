@@ -18,9 +18,9 @@ project to try out several neat and clean Django Patterns and Design based on th
 book, "Best Practices and Design Patterns in Django" as well as for Nodejs
 
 ## Setup
-There are two servers running, Python's Django and JavaScript's Node;
-Reasons: 
-High level layer - Django
+There are two servers running, Python's Django and JavaScript's Node;  
+Reasons:  
+High level layer - Django  
 Low level layer and data processing - Node
 
 ## Installation
@@ -30,7 +30,9 @@ Low level layer and data processing - Node
 ...coming soon
 
 ## Author
-Joshua Adewole
+Joshua Adewole  
+[Github](https://github.com/adewolejosh/) 
+[Twitter](https://twitter.com/adewole_josh/)
 
 
 ... more details soon

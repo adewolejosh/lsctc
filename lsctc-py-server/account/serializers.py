@@ -2,5 +2,9 @@
 from rest_framework import serializers
 
 
-class AccountSerializer(serializers.Serializer, metaclass=None):
+class CreateAccountSerializer(serializers.Serializer, metaclass=None):
+    pass
+
+
+class UserSerializer(serializers.Serializer, metaclass=None):
     pass

@@ -8,6 +8,14 @@ from .choices import GENDER
 User = get_user_model()
 
 
+class ProfileTimes(models.Model):
+    created_time_and_date = models.DateTimeField(auto_now_add=True, editable=False)
+    modified_time_and_date = models.DateTimeField(editable=True)
+
+    class Meta:
+        abstract = True
+
+
 class SocialProfile(models.Model):
     twitter = models.CharField(max_length=100, blank=True, null=True)
     linkedin = models.CharField(max_length=100, blank=True, null=True)
@@ -17,7 +25,7 @@ class SocialProfile(models.Model):
         abstract = True
 
 
-class Profile(SocialProfile):
+class Profile(SocialProfile, ProfileTimes):
     user = models.ForeignKey(User, primary_key=True, on_delete=models.CASCADE)
     gender = models.TextField(choices=GENDER)
     occupation = models.CharField(max_length=100)
